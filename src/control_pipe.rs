@@ -117,7 +117,7 @@ impl<B: UsbBus> ControlPipe<'_, B> {
                 self.i = 0;
                 self.len = req.length as usize;
                 self.state = ControlState::DataOut(req);
-                Some(req)
+                None
             } else {
                 // No data stage
 
